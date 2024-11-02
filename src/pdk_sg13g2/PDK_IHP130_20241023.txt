@@ -1,0 +1,27 @@
+
+
+git clone https://github.com/IHP-GmbH/IHP-Open-PDK
+
+
+ihp-sg13g2/libs.ref/sg13g2_stdcell/verilog/sg13g2_stdcell.v:
+	43301 bytes
+	4a24e83878f5a40e11f0f50a0a06c23a7ff94cab  sg13g2_stdcell.v
+last file change commit:
+	commit def08d0d29084520332be86ed9a7d6815e1144c0
+	Author: Sergei Andreev <andreev@ihp-microelectronics.com>
+	Date:   Tue Feb 20 15:22:15 2024 +0100
+
+	    stdcells: fixed a22oi and sdfbbp cells (Liberty/Verilog) #42
+    
+	    Signed-off-by: Sergei Andreev <andreev@ihp-microelectronics.com>
+
+
+HEAD:
+	commit 035037f6312851414e4bb5daa5a9d18975c768b3
+	Merge: 5a42d03 20d2118
+	Author: Krzysztof Herman <141824113+KrzysztofHerman@users.noreply.github.com>
+	Date:   Wed Oct 23 12:00:21 2024 +0200
+
+	    Merge pull request #222 from IHP-GmbH/dev
+    
+	    Dev
