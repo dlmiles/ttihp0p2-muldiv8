@@ -1,5 +1,18 @@
 ![](../../workflows/gds/badge.svg) ![](../../workflows/docs/badge.svg) ![](../../workflows/test/badge.svg) ![](../../workflows/fpga/badge.svg)
 
+# Combinational multiply / divider unit (8+8 input)
+
+Next iteration from original tt04-muldiv4 towards painting multipler GDS
+directly.  This time we use SpinalHDL functional programming to generate
+netlist for toplogy instead of logicsim-evolution.
+
+Doing this exercise has highlighted well the repeated blocks and the edge
+integration (the differences in function requirements for the edges of the
+design, due to the way it integrated with the previous or next component,
+due to signal pruning, for example use of half-adder instead of full-adder).
+
+[More Documentation](docs/info.md)
+
 # Tiny Tapeout Verilog Project Template
 
 - [Read the documentation for project](docs/info.md)
