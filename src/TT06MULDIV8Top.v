@@ -114,97 +114,97 @@ module TT06MULDIV8Top (
     .rst_n      (rst_n                 ), //i
     .clk        (clk                   )  //i
   );
-  (* keep , syn_keep *) sky130_fd_sc_hd__dlrtp a0_0 (
+  (* keep , syn_keep *) sg13g2_dlhrq a0_0 (
     .D       (a0_0_D      ), //i
     .GATE    (a0open      ), //i
     .RESET_B (a0_0_RESET_B), //i
     .Q       (a0_0_Q      )  //o
   );
-  (* keep , syn_keep *) sky130_fd_sc_hd__dlrtp a0_1 (
+  (* keep , syn_keep *) sg13g2_dlhrq a0_1 (
     .D       (a0_1_D      ), //i
     .GATE    (a0open      ), //i
     .RESET_B (a0_1_RESET_B), //i
     .Q       (a0_1_Q      )  //o
   );
-  (* keep , syn_keep *) sky130_fd_sc_hd__dlrtp a0_2 (
+  (* keep , syn_keep *) sg13g2_dlhrq a0_2 (
     .D       (a0_2_D      ), //i
     .GATE    (a0open      ), //i
     .RESET_B (a0_2_RESET_B), //i
     .Q       (a0_2_Q      )  //o
   );
-  (* keep , syn_keep *) sky130_fd_sc_hd__dlrtp a0_3 (
+  (* keep , syn_keep *) sg13g2_dlhrq a0_3 (
     .D       (a0_3_D      ), //i
     .GATE    (a0open      ), //i
     .RESET_B (a0_3_RESET_B), //i
     .Q       (a0_3_Q      )  //o
   );
-  (* keep , syn_keep *) sky130_fd_sc_hd__dlrtp a0_4 (
+  (* keep , syn_keep *) sg13g2_dlhrq a0_4 (
     .D       (a0_4_D      ), //i
     .GATE    (a0open      ), //i
     .RESET_B (a0_4_RESET_B), //i
     .Q       (a0_4_Q      )  //o
   );
-  (* keep , syn_keep *) sky130_fd_sc_hd__dlrtp a0_5 (
+  (* keep , syn_keep *) sg13g2_dlhrq a0_5 (
     .D       (a0_5_D      ), //i
     .GATE    (a0open      ), //i
     .RESET_B (a0_5_RESET_B), //i
     .Q       (a0_5_Q      )  //o
   );
-  (* keep , syn_keep *) sky130_fd_sc_hd__dlrtp a0_6 (
+  (* keep , syn_keep *) sg13g2_dlhrq a0_6 (
     .D       (a0_6_D      ), //i
     .GATE    (a0open      ), //i
     .RESET_B (a0_6_RESET_B), //i
     .Q       (a0_6_Q      )  //o
   );
-  (* keep , syn_keep *) sky130_fd_sc_hd__dlrtp a0_7 (
+  (* keep , syn_keep *) sg13g2_dlhrq a0_7 (
     .D       (a0_7_D      ), //i
     .GATE    (a0open      ), //i
     .RESET_B (a0_7_RESET_B), //i
     .Q       (a0_7_Q      )  //o
   );
-  (* keep , syn_keep *) sky130_fd_sc_hd__dlrtp a1_0 (
+  (* keep , syn_keep *) sg13g2_dlhrq a1_0 (
     .D       (a1_0_D      ), //i
     .GATE    (a1open      ), //i
     .RESET_B (a1_0_RESET_B), //i
     .Q       (a1_0_Q      )  //o
   );
-  (* keep , syn_keep *) sky130_fd_sc_hd__dlrtp a1_1 (
+  (* keep , syn_keep *) sg13g2_dlhrq a1_1 (
     .D       (a1_1_D      ), //i
     .GATE    (a1open      ), //i
     .RESET_B (a1_1_RESET_B), //i
     .Q       (a1_1_Q      )  //o
   );
-  (* keep , syn_keep *) sky130_fd_sc_hd__dlrtp a1_2 (
+  (* keep , syn_keep *) sg13g2_dlhrq a1_2 (
     .D       (a1_2_D      ), //i
     .GATE    (a1open      ), //i
     .RESET_B (a1_2_RESET_B), //i
     .Q       (a1_2_Q      )  //o
   );
-  (* keep , syn_keep *) sky130_fd_sc_hd__dlrtp a1_3 (
+  (* keep , syn_keep *) sg13g2_dlhrq a1_3 (
     .D       (a1_3_D      ), //i
     .GATE    (a1open      ), //i
     .RESET_B (a1_3_RESET_B), //i
     .Q       (a1_3_Q      )  //o
   );
-  (* keep , syn_keep *) sky130_fd_sc_hd__dlrtp a1_4 (
+  (* keep , syn_keep *) sg13g2_dlhrq a1_4 (
     .D       (a1_4_D      ), //i
     .GATE    (a1open      ), //i
     .RESET_B (a1_4_RESET_B), //i
     .Q       (a1_4_Q      )  //o
   );
-  (* keep , syn_keep *) sky130_fd_sc_hd__dlrtp a1_5 (
+  (* keep , syn_keep *) sg13g2_dlhrq a1_5 (
     .D       (a1_5_D      ), //i
     .GATE    (a1open      ), //i
     .RESET_B (a1_5_RESET_B), //i
     .Q       (a1_5_Q      )  //o
   );
-  (* keep , syn_keep *) sky130_fd_sc_hd__dlrtp a1_6 (
+  (* keep , syn_keep *) sg13g2_dlhrq a1_6 (
     .D       (a1_6_D      ), //i
     .GATE    (a1open      ), //i
     .RESET_B (a1_6_RESET_B), //i
     .Q       (a1_6_Q      )  //o
   );
-  (* keep , syn_keep *) sky130_fd_sc_hd__dlrtp a1_7 (
+  (* keep , syn_keep *) sg13g2_dlhrq a1_7 (
     .D       (a1_7_D      ), //i
     .GATE    (a1open      ), //i
     .RESET_B (a1_7_RESET_B), //i
