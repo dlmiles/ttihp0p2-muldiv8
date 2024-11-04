@@ -2,6 +2,10 @@
 
 # Combinational multiply / divider unit (8+8 input)
 
+> [!IMPORTANT]
+> My upstream project link maybe a better source of more up to date documentation. \
+> [See also original upstream project](https://github.com/dlmiles/tt06-muldiv8)
+
 Next iteration from original tt04-muldiv4 towards painting multipler GDS
 directly.  This time we use SpinalHDL functional programming to generate
 netlist for toplogy instead of logicsim-evolution.

@@ -36,13 +36,15 @@ and timing performance.  Or it might go up in smoke... who knows.
 
 Due to the limited total IOs available at the external TT interface it is
 necessary to clock the project and setup UI\_IN[0] to load each of the 2
-8-bit input registers.
+8-bit input registers that are the inputs to the multiply or divider
+function.
 
 The input side uses latches to capture, which means during the appropiate
-phase CLK (high) and ADDR state, it alternatively opens/closes, the data is
-becomes captured into the latches at the CLK NEGEDGE.  During the whole time
-it is open and closed it is providing the data into the appropiate input
-side of both MUL and DIV units (which are seperate logic modules).
+phase CLK (high) and ADDR state, it alternatively opens/closes, the data
+then becomes captured into the latches at the CLK NEGEDGE.  During the
+whole time it is open and closed it is providing the data into the
+appropiate input side of both MUL and DIV units (which are separate logic
+modules).
 
 The result becomes immediately available (after propagation and ripple
 settling time) at the outputs.  While the latch it open, maybe artificially
@@ -52,7 +54,7 @@ result mode)
 
 The result output is also multiplexed and has an immediate and registered
 mode.  The immediate mode provides a direct visibility of the MUL/DIV
-combintational output and should allos timing between input and outputs
+combintational output and should allow timing between input and outputs
 to be observed.  (you need to account for address multiplex of high-low
 8bit sides of result).  The registered mode capture the result in full at
 the time of the last ADDR and a CLK posedge.  This allows you to change
@@ -99,17 +101,17 @@ FIXME explain addressing mode to allow much wider units and
 -----
 
 
-Multiplier (signed/unsigned)
-Method uses Ripple Carry Array as 'high speed multiplier'
-Setup operation mode bits MULDIV=0 and OPSIGNED(unsigned=0/signed=1)
-Setup A (multiplier 8-bit) * B (multiplicand 8-bit)
+Multiplier (signed/unsigned)\
+Method uses Ripple Carry Array as 'high speed multiplier'\
+Setup operation mode bits MULDIV=0 and OPSIGNED(unsigned=0/signed=1)\
+Setup A (multiplier 8-bit) * B (multiplicand 8-bit)\
 Expect result P (product 16-bit)
 
 
-Divider (signed/unsigned)
-Method uses Full Adder with Mux as 'combinational restoring array divider algorithm'.
-Setup operation mode bits MULDIV=1 and OPSIGNED(unsigned=0/signed=1)
-Setup Dend (dividend 8-bit) / Dsor (divisor 8-bit)
+Divider (signed/unsigned)\
+Method uses Full Adder with Mux as 'combinational restoring array divider algorithm'.\
+Setup operation mode bits MULDIV=1 and OPSIGNED(unsigned=0/signed=1)\
+Setup Dend (dividend 8-bit) / Dsor (divisor 8-bit)\
 Expect result Q (quotient 8-bit) with R (remainder 8-bit)
 
 Divider has error bit indicators that take precedence over any result.
@@ -130,10 +132,18 @@ to a later time.
 
 There should be sufficient instructions here start you own journey.
 
+## IHP130 Update Nov 2024
+
+This project was also sent for fabrication with TT shuttle IHP0p2.
+
+The design is the same as TT06 edition, no significant modifications were
+necessary, other than using `ttihp-verilog-template` as the baseline project
+structure.
+
 ## External hardware
 
-It is expect the RP2040 and a Python REPL should be sufficient test this
-project.
+It is expect the standard TT PCB with RP2040 and a Python REPL should be
+sufficient test this project.
 
 ## Thoughts to the future (next iteration)
 
@@ -148,7 +158,7 @@ is clocked in this way we can pipeline result and demonstration of what pipelini
 can do to increase thoughput.
 
 The TB is limited to the 4bit version.  Ran out of time to validate
-registered output and pipeline.
+registered output and pipeline.  This statement may not longer be correct.
 
 
 Encapsulate the SpinalHDL Scala netlist generation, and write a yosys JVM
@@ -184,7 +194,7 @@ Test support for SUPPORT\_SIGNED=false (try to completely remove nets from
 output instead of assigning constant False and letting synthesis optimize
 away)
 
-Implement support for seperate SUPPORT\_SIGNED for each input with 3 modes
+Implement support for separate SUPPORT\_SIGNED for each input with 3 modes
 of operation ALWAYS/NEVER/BOTH(like now using control input bit)
 
 Implement and test support for odd-sized inputs, so the width of X and Y or
